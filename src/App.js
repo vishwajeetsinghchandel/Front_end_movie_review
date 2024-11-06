@@ -1,5 +1,7 @@
 
 import './App.css';
+import Login from './components/login/login';
+import Register from './components/register/Register';
 import api from './api/axiosConfig';
 import {useState, useEffect} from 'react';
 import Layout from './components/Layout';
@@ -66,6 +68,8 @@ function App() {
             <Route path="/Trailer/:ytTrailerId" element={<Trailer/>}></Route>
             <Route path="/Reviews/:movieId" element ={<Reviews getMovieData = {getMovieData} movie={movie} reviews ={reviews} setReviews = {setReviews} />}></Route>
             <Route path="*" element = {<NotFound/>}></Route>
+            <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
           </Route>
       </Routes>
 
